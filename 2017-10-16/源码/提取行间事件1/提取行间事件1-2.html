@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>提取行间事件1</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style>
+			#box {
+				width: 100px;
+				height: 100px;
+				background: black;
+			}
+</style>
+<script>
+	window.onload=function(){
+		var  oDiv=document.getElementById("box");
+
+		oDiv.onmouseover=function(){
+			var oDiv = document.getElementById('box');
+				oDiv.style.width = '200px';
+				oDiv.style.height = '200px';
+				oDiv.style.background = '#ccc';
+		}
+		oDiv.onmouseout=function(){
+			var oDiv = document.getElementById('box');
+				oDiv.style.width = '100px';
+				oDiv.style.height = '100px';
+				oDiv.style.background = 'black';
+		}
+	}
+</script>
+</head>
+<body>
+	<div  id="box"></div>
+</body>
+</html>

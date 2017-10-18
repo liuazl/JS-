@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>点击一组div变色1</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style>
+		div{
+			width:100px;
+			height:100px;
+			background:#666;
+			float:left;
+			margin-right: 10px;
+			color:#fff;
+			font-size:40px;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var aDiv=document.getElementsByTagName('div');
+			aDiv[0].onclick=function(){
+				this.style.background='#ccc';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background: pink
+}
+
+#box {
+	width: 300px;
+	height: 300px;
+	background: purple;
+}

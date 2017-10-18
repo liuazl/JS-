@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>New Document</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<style>
+		.yellow{
+			background:yellow;
+		}
+		.green{
+			background:green;
+		}
+		.pink{
+			background:pink;
+		}
+	</style>
+
+	<script>
+     window.onload=function(){
+	     var oBtn1=document.getElementById("btn1");
+	     var oBtn2=document.getElementById("btn2");
+	     var oBtn3=document.getElementById("btn3");
+	     var oBody=document.getElementById("body");
+
+	     oBtn1.onclick=function(){
+		     oBody.className='yellow';
+	     }
+	     oBtn2.onclick=function(){
+		     oBody.className='green';
+	     }
+	     oBtn3.onclick=function(){
+		     oBody.className='pink';
+	     }
+     }
+		
+	</script>
+</head>
+<body  class="pink"  id="body">
+	<input  type="button"  value="皮肤1" id="btn1"  />
+	<input  type="button"  value="皮肤2" id="btn2"  />
+	<input  type="button"  value="皮肤3" id="btn3"  />
+</body>
+</html>

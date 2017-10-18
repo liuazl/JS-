@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>改变div样式3</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style>
+#box {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+</style>
+<script>
+	function toBig(){
+		var a=document.getElementById("box");
+		a.style.width='200px';
+		a.stylw.height='200px';
+		a.style.background='green';
+	}
+	function toSmall(){
+		a.style.width='100px';
+		a.style.height='100px';
+		a.style.background='red';
+	}
+</script>
+</head>
+<body>
+	<div  id="box"  onmouseover="toBig();"  onmouseout="toSmall(); "></div>
+</body>
+</html>

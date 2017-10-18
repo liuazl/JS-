@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>获取元素内容</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style>
+			#box {
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+</style>
+<script>
+	window.onload=function(){
+		var oBox=document.getElementById("box");
+
+		oBox.onclick=function(){
+			this.style.background='green';
+			alert(this.innerHTML);
+		}
+	}
+</script>
+</head>
+<body>
+	<div   id="box">我是一个div </div>
+</body>
+</html>

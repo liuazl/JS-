@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>New Document</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style>
+	#box{
+		width:100px;
+		height:200px;
+		background:red;
+		display:none;
+	}
+</style>
+<script>
+      window.onload=function(){
+	      var oBtn=document.getElementById("btn");
+	      var  oDiv=document.getElementById("box");
+
+	      oBtn.onclick=function(){
+		      if(oDiv.style.display=='block'){
+			      oDiv.style.display='none';
+		      }else{
+			      oDiv.style.display='block'
+		      }
+	      }
+      }
+	
+</script>
+</head>
+<body>
+		<input type="button"  value="登陆" id="btn" />
+	<div  id="box"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>改变div样式1</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style>
+#box {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+</style>
+<script>
+function  bianda(){
+	document.getElementById("box").style.width='200px';
+	document.getElementById("box").style.height='200px';
+	document.getElementById("box").style.background='blue';
+}
+	
+</script>
+</head>
+<body>
+	<div  id="box"  onmouseover="bianda();"
+    onmouseout="document.getElementById('box').style.width='100px';document.getElementById('box').style.height='100px';document.getElementById('box').style.background='yellow';"
+	></div>
+</body>
+</html>
