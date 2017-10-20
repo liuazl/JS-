@@ -1,0 +1,20 @@
+获取非行间[获取计算后的,生效后的]样式：
+	obj.currentStyle.width  IE;不支持的话报undefined;
+	getComputedStyle(oBox,false).width兼容高版本,
+	get:获取,computed:计算后的,style:样式;
+	
+往数组里面添加一个：arr.push(元素);
+
+return:返回值给谁了?谁调用函数就给谁;
+
+出现undefined的情况：
+1.函数不写return,默认返回undefined;
+2.写了return,没写具体的返回值;
+3.访问一个不存在的属性;
+
+eval:主要跟字符串打交道,把字符串转换成JS可以执行的程序;
+	非常好用,但是不建议使用;因为太强大了,[eval注入,eval攻击];
+
+说明:
+  1.JS数组中元素个数的指定没有任何意义.
+  2.JS数组可以动态改变元素个数,若没有设置元素的值,新增的元素之为""
