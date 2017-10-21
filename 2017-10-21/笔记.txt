@@ -1,0 +1,16 @@
+定时器：
+	使用原则：先关后开;
+	关闭定时器：clearInterval(定时器的名字);
+	定时器：每隔多久做一件事儿;
+	开启定时器：setInterval(fn,time);--->每隔多久[time]做一件事[fn];时间以毫秒为单位;一直执行，不关闭就不会停;
+	
+	setTimeout(fn,time):时间以毫秒为单位,只执行一次;	
+	clearTimeout(定时器的名字);
+
+随机数:
+		Math.random()
+		function rnd(n,m){
+			return parseInt(Math.random() * (m -n) + n);
+		}
+数组里面添加一项:
+		arr.push();
