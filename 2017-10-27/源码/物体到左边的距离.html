@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>物体到左边的距离</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+<style>
+			*{
+				margin: 0;
+			}
+			#box4 {
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin-left: 100px;
+			}
+
+			#box2,
+			#box1,
+			#box3 {
+				position: relative;
+				margin-left: 100px;
+			}
+</style>
+<script type="text/javascript">
+	function getPos(obj){
+		var l=0;
+		var t=0;
+		while(obj){
+			l+=obj.offsetLeft;
+			t+=obj.offsetTop;	
+			obj = obj.offsetParent;
+		}
+		return {left:l,top:t}
+	}
+
+	window.onload=function(){
+		var box4=document.getElementById('box4');
+		box4.onclick=function(){
+			alert(getPos(box4).left);
+		}
+	}
+</script>
+	
+</head>
+<body>
+	<div id="box2">
+	<div id="box1">
+    	<div id="box3">
+        	<div id="box4"></div>
+        </div>
+    </div>
+ </div>
+
+</body>
+</html>

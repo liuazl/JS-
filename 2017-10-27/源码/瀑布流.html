@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>瀑布流</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#box {
+			margin: 0 auto;
+			width: 966px;
+			height:auto;
+			overflow:hidden;
+		}
+
+		#box ul {
+			width: 300px;
+			border: #000 1px solid;
+			float: left;
+			margin-right: 20px;
+		}
+
+		#box ul li {
+			width: 280px;
+			margin: 10px 9px;
+			border: #666 1px solid;
+		}
+</style>
+<script type="text/javascript">
+	  function rnd(n,m){
+		  return parseInt(Math.random()*(m-n)+n);
+	  }
+
+	  window.onload=function(){
+		  var box=document.getElementById('box');
+		  var aUI=box.children;
+		  for(var i=0;i<10;i++){
+			  var li=document.createElement('li');
+			  li.style.height=rnd(100,400)+'px';
+			  li.style.background=
+			  'rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+			  aUI[0].appendChild(li);
+		  }
+	  }
+</script>
+</head>
+<body>
+	<div id="box">
+			<ul></ul>
+		    <ul></ul>
+		    <ul></ul>
+    </div>
+
+</body>
+</html>

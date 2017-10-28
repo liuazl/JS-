@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>关于父级</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+<style>
+	#box1 {
+	position: relative;
+}
+#box3 {
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+
+</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var box1=document.getElementById('box1');
+
+			box1.onclick=function(){
+				alert(document.body.offsetParent)
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="box1">
+	  <div id="box2">
+        <div id="box3"></div>
+		  
+	  </div>
+    </div>
+
+</body>
+</html>
