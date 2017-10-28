@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>window.onresize</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style type="text/css" media="screen" id="test">
+		div {
+			width: 100px;
+			height: 100px;
+			background: red;
+		   }
+
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var div=document.getElementById('box');
+			var h3=document.createElement(h3);
+			h3.innerHTML='我是一个h3标签';
+			div.appendChild(h3);
+		}
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>

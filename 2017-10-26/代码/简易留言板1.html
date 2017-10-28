@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>简易留言板</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		windoe.onload=function(){
+			var txt=document.getElementById('txt');
+			var btn = document.getElementById('btn');
+	        var box = document.getElementById('box');
+                 btn.onclick=function(){
+	                 var li=document.createElement('li');
+	                 li.innerHTML=txt.value+ '<a href="javascript:;">隐藏</a>';
+                     box.appendChild(li);
+                     txt.value='';
+                     li.children[0].onclick=function(){
+	                     this.parentNode.style.display='none';
+                     }
+                 }
+		}
+	</script>
+</head>
+<body>
+	use:<input type="text" id="txt" value="" />
+	<input type="button" id="btn" value="添加" />
+	<ul id="box">
+	<!--<li>asdadad<a href="javascript:;">隐藏</a></li>-->
+
+	</ul>
+</body>
+</html>

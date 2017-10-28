@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>添加元素</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		window.onload=function(){
+			var box=document.getElementById('box');
+			var btn=document.getElementById('btn');
+            var h2=document.getElementById('h2');
+			btn.onclick=function(){
+				var h3=document.createElement('h3');
+				h3.innerHTML='其实一个H3标签';
+				box.insertBefore(h3,h2);
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="添加" id="btn"/>
+	<div id="box">
+		<h2  id="h2" >我是一个H2标签</h2>
+	</div>
+
+</body>
+</html>

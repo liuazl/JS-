@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>上下移动</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		window.onload=function(){
+			var box=document.getElementById('box');
+			var btn=box.getElementsByTagName('a');
+			for(var i=0;i<btn.length;i++){
+				if(i%2==0){
+					btn[i].onclick=function(){
+						alert('上移');
+					}else{
+						btn[i].onclick=function(){
+							alert('下移')
+						}
+					}
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="box">
+		    <li><a href="javascript:;">上移</a>111111<a href="javascript:;">下移</a></li>
+		    <li><a href="javascript:;">上移</a>222222<a href="javascript:;">下移</a></li>
+		    <li><a href="javascript:;">上移</a>333333<a href="javascript:;">下移</a></li>
+		    <li><a href="javascript:;">上移</a>444444<a href="javascript:;">下移</a></li>
+		    <li><a href="javascript:;">上移</a>555555<a href="javascript:;">下移</a></li>
+		    <li><a href="javascript:;">上移</a>666666<a href="javascript:;">下移</a></li>
+    </ul>
+
+</body>
+</html>

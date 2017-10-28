@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>移动元素</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+<style>
+		ul,
+		ol {
+			width: 100px;
+			height: 100px;
+			border: #000 1px solid;
+			float:left;
+			overflow:hidden;
+		}
+		input {
+			float: left;
+			margin: 100px 10px 0 10px;
+		}
+</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var box1=document.getElementById('box1');
+			var box2=document.getElementById('box1');
+			var btn=document.getElementById('btn');
+			btn.onclick=function(){
+				box2.insertBefore(box1.children[0].box2.children[0]);
+			}
+		}
+	</script>
+</head>
+<body>
+	 <ul id="box1">
+		<li>123214323</li>
+	    <li>1232sasaddsa14323</li>
+	    <li>fresgergre</li>
+	    <li>bmhjkjl;jkq3</li>
+	</ul>
+	<input type="button" value="移动" id="btn"/>
+	<ol id="box2"></ol>
+</body>
+</html>

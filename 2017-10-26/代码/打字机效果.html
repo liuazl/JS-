@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>window.onresize</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<style type="text/css" media="screen" id="test">
+		div{
+				width: 50px;
+				height:50px;
+				line-height:50px;
+				text-align:center;
+				color: #fff;
+				background:red;
+				float:left;
+				border-radius: 50%;
+				margin:5px;
+			}
+
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var str = '的时候回出错,会认为括号没写完,解决方法是';
+            var timer="null";
+            var iNow=0;
+            timer=setInterval(function(){
+                iNow++;
+                if(iNow==str.length-1){
+	                clearInterval(timer);
+                }
+                var oDiv = document.createElement('div');
+			oDiv.innerHTML = str.charAt(iNow);		
+			document.body.appendChild(oDiv);
+			
+	            }, 30);
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>
