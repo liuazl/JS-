@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>关于select1</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		window.onload=function(){
+			var txt=document.getElementById('text');
+			var btn=document.getElementById('btn'); 
+
+			btn.onclick=function(){
+				var win=window.open('about:blank');
+				win.document.write(txt.value);
+				setTimeout(function(){
+					win.onload();
+					}, 100);
+			}
+		}
+	</script>
+</head>
+<body>
+	<textarea cols="100" rows="20" id="text"></textarea>
+<br/>
+<input type="button" value="运行代码" id="btn"/>
+
+</body>
+</html>

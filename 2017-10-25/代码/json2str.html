@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>json</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		var json={a:1,
+					b:2,
+					c:3
+				  };
+		var arr=[];
+		for(var name in json){
+			arr.push(name+'='+json[name]);
+		}
+	function json2str(json){
+		var arr=[];
+		for(var name in json){
+			arr.push(name+"="+json[name]);
+		}
+		return arr.join('&');
+	}
+	console.log(json2str({a:1,b:2,c:3}))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

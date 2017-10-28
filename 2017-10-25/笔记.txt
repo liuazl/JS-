@@ -1,0 +1,6 @@
+下一个兄弟节点：
+		obj.nextSibling:高版本浏览器会识别空格;IE8--undefined;	
+		obj.nextElementSibling:高版本正常,IE8--报正常;
+想要获得下一个兄弟 需要将他们结合起来 判断obj.nextSibling || obj.nextElementSibling
+
+_blank:表示另外打开一个页面 
