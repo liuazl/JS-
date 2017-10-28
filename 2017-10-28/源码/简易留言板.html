@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>简易留言板</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		window.onload=function(){
+			var txt=document.getElementById('txt');
+			var btn = document.getElementById('btn');
+	        var box = document.getElementById('box');
+
+             btn.onclick = function(){
+		            sendMessage();
+	}
+function sendMessage(){
+		var oLi = document.createElement('li');
+		oLi.innerHTML = oTxt.value + '<a href="javascript:;">隐藏</a>';
+		
+		if(oBox.children.length){
+			oBox.insertBefore(oLi,oBox.children[0]);	
+		}else{
+			oBox.appendChild(oLi);		
+		}
+		
+		oTxt.value = '';
+		oLi.children[0].onclick = function(){
+			oBox.removeChild(this.parentNode);
+		}	
+	}
+	
+	oTxt.onkeydown = function(ev){
+		var oEvent = ev || event;
+		if(oEvent.ctrlKey && oEvent.keyCode == 13){
+			sendMessage();	
+		}
+	}
+
+		}
+	</script>
+</head>
+<body>
+	user:<input type="text" value="" id="txt"/>
+	<input type="button" value="添加" id="btn"/>
+	<ul id="box"></ul>
+
+</body>
+</html>
