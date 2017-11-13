@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>实时统计输入的文字</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		window.onload=function(){
+			var oTxt=document.getElementById('txt');
+			var timer=null;
+			if(window.navigator.userAgent.indexOf('MSIE 9.0')!=-1){
+				oTxt.onfocus=function(){
+					timer=setInterval(function(0[
+					document.title=oTxt.value.length;), 100);
+				}
+				oTxt.onblur=function(){
+					clearInterval(timer);
+				}
+			}else{
+				oTxt.onpropertychange=oTx.oninput=function(){
+					document.title=oTxt.value.length;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="test" value=""  id="txt" />
+</body>
+</html>

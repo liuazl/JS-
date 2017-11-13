@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>滚轮事件</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <style type="text/css" media="screen" id="test">
+    	#div{
+	    	width:400px;
+	    	height:400px;
+	    	background:red;
+	    	margin: 50px auto;
+    	}
+    	
+    </style>
+     <script src="addWheel.js"></script>
+    <script type="text/javascript">
+    	window.onload=function(){
+	    	var div=document.getElementById('div');
+	    	addWheel(div,function(down){
+		    	div.onmousewheel=null;
+		    	if(down){
+			    	div.style.height=div.offseHeight-10+'px';
+		    	}else{
+			    	div.style.height=div.offsetHeight+10+'px';
+		    	}
+	    	});
+    	}
+    </script>
+	
+</head>
+<body style="height:3000px">
+	<div id="div" class="test">
+		
+	</div>
+</body>
+</html>
