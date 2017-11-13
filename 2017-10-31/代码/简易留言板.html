@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>简易留言板</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		window.onload=function(){
+			var oBox=document.getElementById('box');
+			var aLi=oBox.children;
+			var oBtn=document.getElementById('btn');
+		      var oTxt = document.getElementById('txt');
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].onclick = function () {
+                    alert(this.innerHTML);
+                }
+            }
+
+            oBtn.onclick = function(){
+                var oLi = document.createElement('li');
+                oLi.innerHTML = oTxt.value;
+                oBox.appendChild(oLi);
+            }
+
+            oBox.onclick = function(ev){
+                var oEvent = ev || event;
+                var oTarget = oEvent.target || oEvent.srcElement;
+                if(oTarget.tagName == 'LI'){
+                    alert(oTarget.innerHTML);
+                }
+            }
+        }
+
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="txt">
+	<input type="button" value="按钮" id="btn">
+	<ul id="box">
+	    <li>123213</li>
+	    <li>123213</li>
+	</ul>
+
+</body>
+</html>

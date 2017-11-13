@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>domready5</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	  <style>
+        #div {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <script type="text/javascript">
+    	function domReady(fn){
+	    	if(document.addEventListener) {
+	    		document.addEventListener('DOMContentLoaded',function(){
+                    fn && fn();
+                }, false););
+            }else{
+	            document.attachEvent('onreadystatechange',function(){
+		            if(document.readyState == 'complete'){
+                        fn && fn();
+                    }
+	            });
+            }
+    	}
+
+    	domReady(function(){
+	    	var oDiv=document.getElementById('div');
+	    	oDiv.onclick=function(){
+		       alert('1'); 	
+	    	}
+    	});
+    </script>
+</head>
+<body>
+	<div id="div"></div>
+</body>
+</html>

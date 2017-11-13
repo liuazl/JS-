@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>onmouseover的问题</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	   <style>
+        #div {
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
+
+        #h3 {
+            width: 300px;
+            height: 100px;
+            background: green;
+        }
+    </style>
+
+    <script type="text/javascript">
+    	window.onload=function(){
+	    	var oDiv=document.getElementById('div');
+	    	var oH3=document.getElementById('h3');
+
+	    	oDiv.onmouseover=function(ev){
+		    	var oEvent=ev || event;
+		    	var oForm=oEvent.fromElement || oEvent.relatedTarget;
+		    	if(oDiv.contains(oForm))return;
+		    	alert('移入了')；
+	    	}
+    	}
+    </script>
+</head>
+<body>
+	<div id="div">
+    <h3 id="h3"></h3>
+</div>
+
+</body>
+</html>
