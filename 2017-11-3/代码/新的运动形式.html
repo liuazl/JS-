@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>新的运动形式</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+<style>
+#box {
+	width: 100px;
+	height: 100px;
+	background:red;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+</style>
+<script src="move.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var oBox = document.getElementById('box');
+
+	}var b = Tween.Back.prototype;
+	oBox.onclick = function(){
+		move(this,{left:700},{easeing:b});
+	}
+}
+</script>
+	
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>
