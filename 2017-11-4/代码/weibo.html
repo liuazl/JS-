@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>weibo</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script>
+function setCookie(name,value,iDay){
+	if(iDay){
+		var oDate = new Date();
+		oDate.setDate(oDate.getDate() + iDay);
+		document.cookie = name+'='+value+';path=/;expires=' + oDate;	
+	}else{
+		document.cookie = name+'='+value+';path=/';
+	}
+}
+
+function getCookie(name){
+	var arr = document.cookie.split('; ');
+	for(var i = 0; i < arr.length; i++){
+		var tmp = arr[i].split('=');
+		if(name == tmp[0]){
+			return tmp[1];	
+		}
+	}
+	return '';
+}
+window.onload = function(){
+	var oTxt = document.getElementById('txt');
+		
+	var str = getCookie('value');
+	oTxt.value = str;	
+
+	oTxt.onblur = function(){
+		setCookie('value',oTxt.value,3);	
+	}
+}
+</script>
+</head>
+<body>
+	<textarea cols="70" rows="15" id="txt"></textarea>
+</body>
+</html>
