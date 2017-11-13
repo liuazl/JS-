@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>运动</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+ <style>
+        #div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+<script type="text/javascript">
+	 window.onload = function () {
+            var oDiv = document.getElementById('div');
+            var timer = null;
+            oDiv.onclick = function () {
+                move(oDiv,600,1000);
+            }
+
+            function move(obj,iTarget,time) {
+                var start = 100;
+                var dis = iTarget - start;
+                var count = Math.floor(time / 30);
+                var step = dis / count;
+                var n = 0;
+                timer = setInterval(function () {
+                    n++;
+                    obj.style.left = 100 + step * n + 'px';
+                    if (n == count) {
+                        clearInterval(timer);
+                    }
+                }, 30);
+
+            }
+        }
+
+</script>
+	
+</head>
+<body>
+	<div id="div"></div>
+</body>
+</html>

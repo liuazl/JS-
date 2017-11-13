@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>运动</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+ <style>
+        #div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+     <script src="move.js"></script>
+    <script type="text/javascript">
+	  window.onload = function () {
+            var oDiv = document.getElementById('div');
+            var timer = null;
+            oDiv.onclick = function(){
+                move(oDiv,{width:300,height:300},3000);
+            };
+    }
+    </script>
+	
+</head>
+<body>
+	<div id="div"></div>
+</body>
+</html>
