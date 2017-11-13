@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>校验汉字</title>
+	<meta name="generator" content="EverEdit" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script type="text/javascript">
+		 window.onload = function(){
+            var oTxt = document.getElementById('txt');
+            var oBtn = document.getElementById('btn');
+
+            var reg = /^(0[1-9]\d{1,2}-)?[1-9]\d{6,7}$/;
+
+            oBtn.onclick = function () {
+                alert(reg.test(oTxt.value));
+            }
+        }
+
+	</script>
+</head>
+<body>
+<input type="text" name="" id="txt">
+<input type="button" value="校验" id="btn">
+	
+</body>
+</html>
